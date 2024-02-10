@@ -1,5 +1,5 @@
-const hs_ring1 = require('../data/hs_ring1.json');
-const hs_ring2 = require('../data/hs_ring2.json');
+const hs_ring1 = require('./data/hs_ring1.json');
+const hs_ring2 = require('./data/hs_ring2.json');
 const ring1_order = ['1100', '1030', '1050', '960', '950', '810', 'B4', 'B5', '170', '210', '610', '280', 'G1', '210_2',
     '170_2', 'B5_2', 'B4_2', '810_2', '950_2', '960_2', '1050_2', '1030_2', '1100_2'];
 const ring2_order = ['G1', '210', '170', 'B5', '40', '320', '710', '960', '1050', '961', '910', '202', '850', '200',
@@ -52,4 +52,4 @@ export function getNextTime(currentLoc, goalLoc) {
     return [true, time];
 }
 
-console.log(getNextTime("1050", "1100"));
+// console.log(getNextTime("1050", "1100"));
