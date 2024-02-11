@@ -8,13 +8,16 @@ import {getNextTime} from "./data_retriever";
 export default function App() {
     const [selectedLocation, setSelectedLocation] = useState();
     const [selectedDestination, setSelectedDestination] = useState();
-    var solutionText = "";
+    const [solutionText, setSolutionText] = useState("");
 
     useEffect(() => {
         console.log(selectedLocation);
         if(selectedLocation !== "default" && selectedDestination !== "default") {
             const times = getNextTime(selectedLocation, selectedDestination);
-            solutionText = TEXTS.next + times;
+            if( times[0]) {
+                setSolutionText(TEXTS.next + times[1]);
+                console.log(solutionText);
+            }
         }
     }, [selectedLocation, selectedDestination]);
 

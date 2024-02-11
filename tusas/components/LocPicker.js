@@ -3,7 +3,7 @@ import {Picker} from '@react-native-picker/picker';
 
 const stops = ['1100', '1030', '1050', '960', '950', '810', 'B4', 'B5', '170', '210', '610', '280', 'G1'];
 
-export const LocPicker = ({value, setValue}) => {
+export function LocPicker ({value, setValue}) {
     return (
         <Picker
             style={styles.pickerStyles}
